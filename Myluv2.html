@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เซอร์ไพรส์สำหรับเธอ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e96eca, #d45fcb);
+            color: white;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, rgba(0,0,0,0) 70%);
+            animation: moveBackground 10s infinite alternate linear;
+            z-index: -1;
+        }
+        @keyframes moveBackground {
+            0% {
+                transform: translateX(-10%) translateY(-10%);
+            }
+            100% {
+                transform: translateX(10%) translateY(10%);
+            }
+        }
+        nav {
+            background-color: rgba(255, 182, 193, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .back-button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .back-button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    <nav>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('gallery')">Gallery</a>
+        <a href="#" onclick="showPage('video')">Video</a>
+        <a href="#" onclick="showPage('music')">Music</a>
+    </nav>
+    
+    <div id="home" class="content">
+        <h1>เซอร์ไพรส์สำหรับเธอ 💖</h1>
+        <p>หวังว่าความรักของเราจะมีแต่ความสุขนะ 😊</p>
+    </div>
+    
+    <div id="gallery" class="content hidden">
+        <h2>รูปภาพของเรา</h2>
+        <img src="/images/love1.jpg" alt="love" width="200">
+        <img src="/images/love2.jpg" alt="love" width="200">
+        <button class="back-button" onclick="showPage('home')">กลับหน้าหลัก</button>
+    </div>
+    
+    <div id="video" class="content hidden">
+        <h2>วิดีโอของเรา</h2>
+        <video controls width="300">
+            <source src="/videos/love-story.mp4" type="video/mp4">
+        </video>
+        <button class="back-button" onclick="showPage('home')">กลับหน้าหลัก</button>
+    </div>
+    
+    <div id="music" class="content hidden">
+        <h2>เพลงของเรา</h2>
+        <audio controls>
+            <source src="/music/our-song.mp3" type="audio/mp3">
+        </audio>
+        <button class="back-button" onclick="showPage('home')">กลับหน้าหลัก</button>
+    </div>
+    
+    <script>
+        function showPage(page) {
+            document.querySelectorAll('.content').forEach(div => div.classList.add('hidden'));
+            document.getElementById(page).classList.remove('hidden');
+        }
+    </script>
+      <!-- From Uiverse.io by doniaskima --> 
+<button class="btn-17">
+    <span class="text-container">
+      <span class="text" onclick="goToNextPage()">Next 💕</span>
+    </span>
+  </button>
+  
+    </div>
+    
+<!-- From Uiverse.io by G4b413l --> 
+<div class="bar">
+    <div class="ball"></div>
+</div>
+    <script>
+        function goToNextPage() {
+            window.location.href = "Myluv3.html";
+        }
+        </script>
+    </div>
+     
+</body>
+</html>
